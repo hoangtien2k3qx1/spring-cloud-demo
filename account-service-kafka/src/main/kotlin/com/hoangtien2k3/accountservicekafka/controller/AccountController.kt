@@ -32,4 +32,5 @@ class AccountController @Autowired constructor(val kafkaTemplate: KafkaTemplate<
 
         return account
     }
+
 }
