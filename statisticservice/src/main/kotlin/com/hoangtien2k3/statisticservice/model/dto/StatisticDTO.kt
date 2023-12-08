@@ -8,6 +8,4 @@ class StatisticDTO(
     var id: Long,
     var message: String,
     var createdDate: Date
-) {
-
-}
+)

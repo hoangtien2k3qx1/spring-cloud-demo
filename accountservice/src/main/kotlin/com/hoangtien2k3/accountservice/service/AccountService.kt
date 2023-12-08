@@ -1,6 +1,6 @@
 package com.hoangtien2k3.accountservice.service
 
-import com.hoangtien2k3.accountservice.model.AccountDTO
+import com.hoangtien2k3.accountservice.model.dto.AccountDTO
 
 interface AccountService {
     fun add(accountDTO: AccountDTO)

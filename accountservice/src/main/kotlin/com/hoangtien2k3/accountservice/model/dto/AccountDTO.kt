@@ -1,4 +1,4 @@
-package com.hoangtien2k3.accountservice.model
+package com.hoangtien2k3.accountservice.model.dto
 
 import lombok.Data
 

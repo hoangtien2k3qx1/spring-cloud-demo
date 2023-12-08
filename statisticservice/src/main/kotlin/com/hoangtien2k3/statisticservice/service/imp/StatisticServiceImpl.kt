@@ -8,7 +8,6 @@ import jakarta.transaction.Transactional
 import org.modelmapper.ModelMapper
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
-import java.util.stream.Stream
 
 @Service
 @Transactional
@@ -23,14 +22,6 @@ class StatisticServiceImpl @Autowired constructor(
     }
 
     override fun getAll(): List<StatisticDTO> {
-//        return statisticRepository.findAll().map {
-//            m -> modelMapper.map(m, StatisticDTO::class.java)
-//        }
-
-//        return statisticRepository.findAll().map {
-//            modelMapper.map(it, StatisticDTO::class.java)
-//        }
-
         return statisticRepository.findAll().let {
             list -> list.map {
                 modelMapper.map(it, StatisticDTO::class.java)

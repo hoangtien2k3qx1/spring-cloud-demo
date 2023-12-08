@@ -3,10 +3,8 @@ package com.hoangtien2k3.notificationservice.service
 import com.hoangtien2k3.notificationservice.dto.MessageDTO
 import jakarta.mail.MessagingException
 import jakarta.mail.internet.MimeMessage
-import org.hibernate.type.StandardBasicTypes
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.mail.javamail.JavaMailSender
-import org.springframework.mail.javamail.MimeMailMessage
 import org.springframework.mail.javamail.MimeMessageHelper
 import org.springframework.stereotype.Service
 import org.thymeleaf.context.Context
@@ -21,11 +19,9 @@ class EmailServiceImpl @Autowired constructor(
 
     override fun sendEmail(messageDTO: MessageDTO) {
         try {
-
 //            log.info("Start ---> Send Email")
-
-            var message: MimeMessage = javaMailSender.createMimeMessage()
-            var helper: MimeMessageHelper = MimeMessageHelper(message, StandardCharsets.UTF_8.name())
+            val message: MimeMessage = javaMailSender.createMimeMessage()
+            val helper: MimeMessageHelper = MimeMessageHelper(message, StandardCharsets.UTF_8.name())
 
             // load template email with context
             val context = Context()
@@ -41,7 +37,6 @@ class EmailServiceImpl @Autowired constructor(
             javaMailSender.send(message)
 
 //            log.info("Send Email Successfully")
-
         } catch (ex: MessagingException) {
             ex.printStackTrace()
         }

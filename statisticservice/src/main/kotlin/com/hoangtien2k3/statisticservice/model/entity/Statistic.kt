@@ -17,6 +17,4 @@ class Statistic(
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "created_date")
     var createdDate: Date
-){
-
-}
+)

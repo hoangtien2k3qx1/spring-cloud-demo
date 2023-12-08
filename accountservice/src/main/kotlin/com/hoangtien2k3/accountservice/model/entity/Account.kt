@@ -1,4 +1,4 @@
-package com.hoangtien2k3.accountservice.entity
+package com.hoangtien2k3.accountservice.model.entity
 
 import jakarta.persistence.*
 

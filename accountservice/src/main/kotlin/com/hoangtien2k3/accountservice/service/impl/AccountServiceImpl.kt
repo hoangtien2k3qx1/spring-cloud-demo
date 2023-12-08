@@ -1,7 +1,7 @@
 package com.hoangtien2k3.accountservice.service.impl
 
-import com.hoangtien2k3.accountservice.entity.Account
-import com.hoangtien2k3.accountservice.model.AccountDTO
+import com.hoangtien2k3.accountservice.model.entity.Account
+import com.hoangtien2k3.accountservice.model.dto.AccountDTO
 import com.hoangtien2k3.accountservice.repository.AccountRepository
 import com.hoangtien2k3.accountservice.service.AccountService
 import jakarta.transaction.Transactional
